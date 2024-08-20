@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="test">
+      你好, {{ content }}
+      <br />
+      <span>{{ description }}</span>
+    </div>
+
+    <script type="module">
+      import Due from './core/index.js'
+      window.test = new Due({
+        el: 'test',
+        data: {
+          content: 'panda',
+          description: 'panda say hello',
+          obj: {
+            x: 1,
+            y: 2,
+          },
+          list: [
+            { a: 'panda', b: 18 },
+            { a: 'monkey', b: 20 },
+          ],
+        },
+      })
+    </script>
+  </body>
+</html>
